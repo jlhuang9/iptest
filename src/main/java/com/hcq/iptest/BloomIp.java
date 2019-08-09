@@ -4,7 +4,7 @@ import java.util.BitSet;
 
 public class BloomIp {
     /**
-     * bitSetÖ»ÄÜÊÇÕıÊıÉè¸ösize±£Ö¤hashËãµÄÊÇÕıÊı
+     * bitSetåªèƒ½æ˜¯æ­£æ•°è®¾ä¸ªsizeä¿è¯hashç®—çš„æ˜¯æ­£æ•°
      */
     private static final int SIZE = 1<<24;
     BitSet bitSet=new BitSet(SIZE);
@@ -13,11 +13,11 @@ public class BloomIp {
     public static void main(String[] args) {
         String ip="192.168.1.1";
         BloomIp bloomDemo=new BloomIp();
-        System.out.println(ip+"ÊÇ·ñÔÚÁĞ±íÖĞ£º "+bloomDemo.contains(ip));
+        System.out.println(ip+"æ˜¯å¦åœ¨åˆ—è¡¨ä¸­ï¼š "+bloomDemo.contains(ip));
         bloomDemo.add(ip);
-        System.out.println(ip+"ÊÇ·ñÔÚÁĞ±íÖĞ£º "+bloomDemo.contains(ip));
+        System.out.println(ip+"æ˜¯å¦åœ¨åˆ—è¡¨ä¸­ï¼š "+bloomDemo.contains(ip));
         ip="192.168.1.2";
-        System.out.println(ip+"ÊÇ·ñÔÚÁĞ±íÖĞ£º "+bloomDemo.contains(ip));
+        System.out.println(ip+"æ˜¯å¦åœ¨åˆ—è¡¨ä¸­ï¼š "+bloomDemo.contains(ip));
         bloomDemo.add("255.255.255.255");
 
     }

@@ -4,29 +4,29 @@ import java.util.BitSet;
 
 public class BitIp {
     /**
-     * int ·¶Î§ÊÇ -2^31¡ª¡ª2^31-1
-     * bitsetÖ»ÄÜ´æÕıÊı0-2^31-1£¬ËùÒÔÒªÁ½¸öbitset
+     * int èŒƒå›´æ˜¯ -2^31â€”â€”2^31-1
+     * bitsetåªèƒ½å­˜æ­£æ•°0-2^31-1ï¼Œæ‰€ä»¥è¦ä¸¤ä¸ªbitset
      */
     private static final int SIZE = 1 << 31 - 1;
     /**
-     * ÕâÀï´æÕıÊı
+     * è¿™é‡Œå­˜æ­£æ•°
      */
     BitSet aSet = new BitSet(SIZE);
     /**
-     * ÕâÀï´æ¸ºÊı
+     * è¿™é‡Œå­˜è´Ÿæ•°
      */
     BitSet bSet = new BitSet(SIZE);
 
     public static void main(String[] args) {
         String ip = "192.168.1.1";
         BitIp bitIp = new BitIp();
-        System.out.println(ip + "ÊÇ·ñÔÚÁĞ±íÖĞ£º " + bitIp.contains(ip));
+        System.out.println(ip + "æ˜¯å¦åœ¨åˆ—è¡¨ä¸­ï¼š " + bitIp.contains(ip));
         bitIp.add(ip);
-        System.out.println(ip + "ÊÇ·ñÔÚÁĞ±íÖĞ£º " + bitIp.contains(ip));
+        System.out.println(ip + "æ˜¯å¦åœ¨åˆ—è¡¨ä¸­ï¼š " + bitIp.contains(ip));
         bitIp.delete(ip);
-        System.out.println(ip + "ÊÇ·ñÔÚÁĞ±íÖĞ£º " + bitIp.contains(ip));
+        System.out.println(ip + "æ˜¯å¦åœ¨åˆ—è¡¨ä¸­ï¼š " + bitIp.contains(ip));
         ip = "192.168.1.2";
-        System.out.println(ip + "ÊÇ·ñÔÚÁĞ±íÖĞ£º " + bitIp.contains(ip));
+        System.out.println(ip + "æ˜¯å¦åœ¨åˆ—è¡¨ä¸­ï¼š " + bitIp.contains(ip));
 
     }
 
